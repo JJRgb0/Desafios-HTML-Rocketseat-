@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+</head>
+
+<body>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <fieldset name="inputs-contact">
+            <legend style="text-transform: capitalize;">Entre em contato preenchendo o formulário abaixo</legend>
+            <label style="font-weight: bold;"><br> Escolha o assunto:
+                <select name="assunto" required>
+                    <option value="Suporte técnico">Suporte técnico</option>
+                    <option value="Problemas com o produto">Problemas com o produto</option>
+                    <option value="Devolução">Devolução</option>
+                    <option value="Problemas com o pagamento">Problemas com o pagamento</option>
+                </select><br><br>
+            </label>
+            <label style="font-weight: bold;"><br>Nome Completo:
+                <br><input type="text" name="nome" required placeholder="Seu Nome"><br>
+            </label>
+            <label style="font-weight: bold;"><br>E-mail:
+                <br><input type="email" name="email" required placeholder="Digite Seu Email" spellcheck="false"><br>
+            </label>
+            <label style="font-weight: bold;"><br>Senha:
+                <br><input type="password" name="senha" required placeholder="Digite Sua Senha" minlength="6" size="12"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W])[a-zA-Z\d\W]{6,}$"
+                    title=" A senha deve conter: 6 caracteres, 1 letra minuscula, 1 letra maiuscula, 1 numero e 1 caracter especial"
+                    autocomplete="off"><br>
+            </label>
+            <label style="font-weight: bold;"><br>Telefone:
+                <br><input type="text" required name="numero" placeholder="Digite seu telefone" inputmode="numeric"
+                    maxlength="14" minlength="8"
+                    pattern="(\d{4,7}[-]?\d{4})|(\d{9,11})|([(][0-9]{2}[)]\d{4,7}[-]?\d{4})"
+                    title="Exemplo: (11)99999-9999; 11999999999; 999999999; 99999-9999; 99999999; 9999-9999"><br>
+            </label>
+            <label style="font-weight: bold;"><br>Fotos do problema: (opcional)
+                <br><input type="file" accept="image/*" multiple title="Escolha o arquivo"><br>
+            </label>
+            <label style="font-weight: bold;"><br>Você tem mais de 18 anos?
+                <label style="font-weight: normal;"><br>
+                    <input type="radio" name="idade18" value="sim" required>Sim
+                </label>
+                <label style="font-weight: normal;">
+                    <input type="radio" name="idade18" value="não" required>Não<br>
+                </label>
+            </label>
+            <label style="font-weight: bold;"><br>Mensagem:
+                <br><textarea name="Mensagem" cols="40" rows="10" minlength="50" maxlength="1000"
+                    placeholder="Digite sua mensagem" required></textarea><br>
+            </label>
+            <label><br>O quão insatisfeito você está com o problema? (opcional)
+                <br><input type="range" value="-2" min="-5" max="5" step="1" name="insatisfação"><br>
+            </label>
+            <label>
+                <br><input type="checkbox" value="inscrito" name="inscreva-se"> Aceito receber novidades por e-mail
+            </label>
+            <label>
+                <br><input type="checkbox" required value="concordo" name="termos"> Li e concordo com os termos
+            </label>
+            <input type="hidden" name="dataHora" value="">
+            <br><br>
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+    <br>
+    <a href="../glossario.html">Página Anterior</a>
+    <br>
+    <a href="./compras.html">Próxima Página</a>
+</body>
+
+</html>
